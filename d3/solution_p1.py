@@ -9,14 +9,8 @@ def mul(x, y):
 result = 0
 enabled = True
 for line in lines:
-    l = re.findall(r"mul\(\d+,\d+\)|don't\(\)|do\(\)", line)
-    print(l)
+    l = re.findall(r"mul\(\d+,\d+\)", line)
     for inst in l:
-        if inst == "don't()":
-            enabled = False
-        elif inst == "do()":
-            enabled = True
-        elif enabled:
-            result += eval(inst)
+        result += eval(inst)
 
 print(result)
