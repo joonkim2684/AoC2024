@@ -23,10 +23,8 @@ for line in lines:
     operands_list.append([int(x) for x in line[1:]])
 
 result = 0
-count = 0
 for goal, operands in zip(goal_list, operands_list):
     if search_tree(operands[0], goal, operands[1:]):
         result += goal
-        count += 1
 
 print(result)
