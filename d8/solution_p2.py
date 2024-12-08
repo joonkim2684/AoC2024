@@ -46,6 +46,6 @@ def getAntinodes(p1, p2):
 
 resultSet = set()
 for pair in pairs:
-    resultSet.update(getAntinodes(pair[0], pair[1]))
+    resultSet.update(getAntinodes(*pair))
 
 print(len(resultSet))
