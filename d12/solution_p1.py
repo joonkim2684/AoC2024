@@ -9,7 +9,6 @@ def inBoard(board, x, y):
 NEIGHBORS = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
 visited = []
-print(board[9][8])
 def searchNeighbors(board, x, y, c):
     global visited
     area, perimeter = 0, 0
